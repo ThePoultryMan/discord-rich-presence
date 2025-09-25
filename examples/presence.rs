@@ -4,7 +4,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut client = DiscordIpcClient::new(&std::env::args().collect::<Vec<String>>()[1]);
 
     client.connect()?;
-    client.set_activity(activity::Activity::new().state("foo").details("bar"))?;
+    client.set_activity(activity::Activity::new().state("foo".to_string()).details("bar".to_string()))?;
 
     println!("Activity set! Press enter to exit...");
 

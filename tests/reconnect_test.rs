@@ -12,12 +12,12 @@ fn test_reconnect() -> Result<(), Box<dyn Error>> {
 
     loop {
         let payload = activity::Activity::new()
-            .state("part 1 (test)")
-            .details("a placeholder")
+            .state("part 1 (test)".to_string())
+            .details("a placeholder".to_string())
             .assets(
                 activity::Assets::new()
-                    .large_image("large-image")
-                    .large_text("a thing"),
+                    .large_image("large-image".to_string())
+                    .large_text("a thing".to_string()),
             );
 
         if client.set_activity(payload).is_err() && client.reconnect().is_ok() {

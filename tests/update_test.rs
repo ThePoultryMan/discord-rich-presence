@@ -8,24 +8,24 @@ fn test_updating() -> Result<(), Box<dyn Error>> {
 
     client.set_activity(
         activity::Activity::new()
-            .state("part 1 (test)")
-            .details("a placeholder")
+            .state("part 1 (test)".to_string())
+            .details("a placeholder".to_string())
             .assets(
                 activity::Assets::new()
-                    .large_image("large-image")
-                    .large_text("a thing"),
+                    .large_image("large-image".to_string())
+                    .large_text("a thing".to_string()),
             ),
     )?;
     std::thread::sleep(std::time::Duration::from_secs(2));
 
     client.set_activity(
         activity::Activity::new()
-            .state("part 2 (test)")
-            .details("a placeholder")
+            .state("part 2 (test)".to_string())
+            .details("a placeholder".to_string())
             .assets(
                 activity::Assets::new()
-                    .large_image("small-image")
-                    .large_text("a thing"),
+                    .large_image("small-image".to_string())
+                    .large_text("a thing".to_string()),
             ),
     )?;
     std::thread::sleep(std::time::Duration::from_secs(2));
