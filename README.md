@@ -1,3 +1,7 @@
+# This is a Fork
+It exists purely to remove the lifetimes from the original project, in order to make it (more)
+usable with [bevy](https://bevy.org/). Please check out the [original project](https://github.com/vionya/discord-rich-presence).
+
 # Discord Rich Presence
 [![crates.io](https://img.shields.io/crates/v/discord-rich-presence.svg)](https://crates.io/crates/discord-rich-presence)
 [![Docs](https://docs.rs/discord-rich-presence/badge.svg?version=1.0.0)](https://docs.rs/discord-rich-presence)
